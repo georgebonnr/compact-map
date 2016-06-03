@@ -32,7 +32,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/georgebonnr/fix-me.git"
+    "url": "git+https://github.com/georgebonnr/compact-map.git"
   },
   "keywords": [
     "node",
@@ -42,9 +42,9 @@
   ],
   "author": "George Bonner <georgebonnr@gmail.com> (http://georgebonnr.com)",
   "bugs": {
-    "url": "https://github.com/georgebonnr/fix-me/issues"
+    "url": "https://github.com/georgebonnr/compact-map/issues"
   },
-  "homepage": "https://github.com/georgebonnr/fix-me#readme",
+  "homepage": "https://github.com/georgebonnr/compact-map#readme",
   "dependencies": {
     "null-like": "^0.1.0"
   }
