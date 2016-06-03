@@ -14,6 +14,12 @@ returns:
 
 To remove falsy values as well, pass in the options object: `{strict: true}`.
 Example:
-`compactMap([{foo: 0}, {foo: 'truthy'}, {foo: null}, {foo: undefined}], (value, index, coll) => value.foo), { strict: true }`
+```
+compactMap(
+    [{foo: 0}, {foo: 'truthy'}, {foo: null}, {foo: undefined}],
+    (value, index, coll) => value.foo,
+    { strict: true }
+)
+```
 returns:
 `['truthy']`
