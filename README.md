@@ -4,7 +4,10 @@ By default compactMap filters out `null` and `undefined` but perserves falsy val
 
 Example 1:
 ```
-compactMap([{foo: 0}, {foo: 'truthy'}, {foo: null}, {foo: undefined}], (value, index, coll) => value.foo)
+compactMap(
+    [{foo: 0}, {foo: 'truthy'}, {foo: null}, {foo: undefined}],
+    (value, index, coll) => value.foo
+)
 ```
 returns:
 ```
@@ -15,7 +18,10 @@ Note that the compacting logic operates on the the return value from the mapping
 
 Example 2:
 ````
-compactMap([undefined, null, false], (value, index, coll) => value + ' mapped')`
+compactMap(
+    [undefined, null, false],
+    (value, index, coll) => value + ' mapped'
+)
 ```
 returns:
 ```
