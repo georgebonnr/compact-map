@@ -44,5 +44,8 @@
   "bugs": {
     "url": "https://github.com/georgebonnr/fix-me/issues"
   },
-  "homepage": "https://github.com/georgebonnr/fix-me#readme"
+  "homepage": "https://github.com/georgebonnr/fix-me#readme",
+  "dependencies": {
+    "null-like": "^0.1.0"
+  }
 }
