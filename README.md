@@ -1,7 +1,19 @@
-Boilerplate for developing small npm modules with ES2015. Borrows heavily from the folks at rackt.
+maps and compacts at the same time.  By default it filters out `null` and `undefined` and perserves falsy values.
 
-1. Develop in ES6.
+Example 1:
+`compactMap([{foo: 0}, {foo: 'truthy'}, {foo: null}, {foo: undefined}], (value, index, coll) => value.foo)`
+returns:
+`[0, 'truthy']`
 
-2. `npm version [patch|minor|major]`
+Note that the compacting logic operates on the the return value from the mapping callback, not the original value in the source collection.
+Example 2:
+`compactMap([undefined, null, false], (value, index, coll) => value + ' mapped')`
+returns:
+`['undefined mapped', 'null mapped', 'false mapped']`
 
-3. `npm publish`
+
+To remove falsy values as well, pass in the options object: `{strict: true}`.
+Example:
+`compactMap([{foo: 0}, {foo: 'truthy'}, {foo: null}, {foo: undefined}], (value, index, coll) => value.foo), { strict: true }`
+returns:
+`['truthy']`
